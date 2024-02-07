@@ -1,0 +1,310 @@
+Pgit init  \Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao>     
+Reinitialized existing Git repository in C:/Users/Alexandre Bento/Downloads/Exercício de Revisão/exercicio_de_revisao/.git/
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch gitest
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   exercicio_de_revisao
+        modified:   index.html
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    exercicio_de_revisao
+        modified:   index.html
+
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git add . 
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch gitest
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git commit -m "Fix Files"
+[gitest c1dd4c8] Fix Files
+ 1 file changed, 3 insertions(+)
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git branch
+* gitest
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git branch main   
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git branch
+  gitest
+* main
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git branch -d gitest
+Deleted branch gitest (was c1dd4c8).
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git branch
+* main
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git branch -M main
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git clone https://github.com/Alexffb32/Modulo-11.git
+Cloning into 'Modulo-11'...
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 13 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (13/13), 87.66 KiB | 524.00 KiB/s, done.
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+visão\exercicio_de_revisao> git checkout main
+Already on 'main'
+visão\exercicio_de_revisao> git fetch
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git merge main
+Already up to date.
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Modulo-11/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git rm Modulo-11/
+fatal: pathspec 'Modulo-11/' did not match any files
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Modulo-11/
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Alexandre Bento\git rm Modulo-11/io de Revisão\exercicio_de_revisao>
+fatal: pathspec 'Modulo-11/' did not match any files
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git rm Modulo-1
+fatal: pathspec 'Modulo-1' did not match any files
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git rm Modulo-11
+fatal: pathspec 'Modulo-11' did not match any files
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git rm /Modulo-11
+fatal: /Modulo-11: '/Modulo-11' is outside repository at 'C:/Users/Alexandre Bento/Downloads/Exercício de Revisão/exercicio_de_revisao'
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status       
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git log   
+commit c1dd4c84fded0085884b23c4e6e342cc2153ef6b (HEAD -> main)
+Author: Alexffb <alexffb32@gmail.com>
+Date:   Wed Feb 7 10:30:23 2024 +0000
+
+    Fix Files
+
+commit 5587398043fdaa40a9ea143b302933e751c12b8e (origin/main)
+Author: Alexffb <alexffb32@gmail.com>
+Date:   Wed Feb 7 09:59:48 2024 +0000
+
+    first commit
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git remote add origin https://github.com/Alexffb32/exercicio_de_revisao.git
+error: remote origin already exists.
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git remote show origin
+* remote origin
+  Fetch URL: https://github.com/Alexffb32/exercicio_de_revisao.git
+  Push  URL: https://github.com/Alexffb32/exercicio_de_revisao.git
+  HEAD branch: (unknown)
+  Remote branch:
+    refs/remotes/origin/main stale (use 'git remote prune' to remove)
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git commit -m "final commit, git test-sucessful!"    
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git branch
+* main
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git branch -M main
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git branch
+* main
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git push -u origin main
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (23/23), 295.65 KiB | 21.12 MiB/s, done.
+Total 23 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Alexffb32/exercicio_de_revisao.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git pull
+Already up to date.
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git bisect start
+status: waiting for both good and bad commits
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status      
+On branch main
+Your branch is up to date with 'origin/main'.
+
+You are currently bisecting, started from branch 'main'.
+  (use "git bisect reset" to get back to the original branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+You are currently bisecting, started from branch 'main'.
+  (use "git bisect reset" to get back to the original branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git add . 
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git commir -m "error fix"
+git: 'commir' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git commit -m "final commit, git test-sucessful!"
+[main e4e7260] final commit, git test-sucessful!
+ 1 file changed, 2 deletions(-)
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+You are currently bisecting, started from branch 'main'.
+  (use "git bisect reset" to get back to the original branch)
+
+nothing to commit, working tree clean
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 366 bytes | 366.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Alexffb32/exercicio_de_revisao.git
+   c1dd4c8..e4e7260  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+You are currently bisecting, started from branch 'main'.
+  (use "git bisect reset" to get back to the original branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   js/scripts.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git add . 
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+You are currently bisecting, started from branch 'main'.
+  (use "git bisect reset" to get back to the original branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   js/scripts.js
+
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git commit -m "error fix in js"
+[main 0723f46] error fix in js
+ 1 file changed, 1 insertion(+)
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git push -u origin main        
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 337 bytes | 337.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Alexffb32/exercicio_de_revisao.git
+   e4e7260..0723f46  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git merge
+Already up to date.
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+You are currently bisecting, started from branch 'main'.
+  (use "git bisect reset" to get back to the original branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   js/scripts.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git add . 
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+You are currently bisecting, started from branch 'main'.
+  (use "git bisect reset" to get back to the original branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   js/scripts.js
+        new file:   readme.md
+
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git commit -m "add readme.md file"
+[main 04fa05f] add readme.md file
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+ create mode 100644 readme.md
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git push -u origin main
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 569 bytes | 569.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Alexffb32/exercicio_de_revisao.git
+   0723f46..04fa05f  main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git pull
+Already up to date.
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+You are currently bisecting, started from branch 'main'.
+  (use "git bisect reset" to get back to the original branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        terminal.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git add.  
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git add .
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+You are currently bisecting, started from branch 'main'.
+  (use "git bisect reset" to get back to the original branch)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   readme.md
+        new file:   terminal.txt
+
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git commit -m "Terminal Log"   
+[main 70778ea] Terminal Log
+ 2 files changed, 3 insertions(+)
+ create mode 100644 terminal.txt
+PS C:\Users\Alexandre Bento\Downloads\Exercício de Revisão\exercicio_de_revisao> git push -u origin main
